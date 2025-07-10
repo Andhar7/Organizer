@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>Create a New Room</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn--main">Create Room</button>
+    </form>
+
+    <div class="back-link">
+        <a href="{% url 'home' %}">Back to Home</a>
+    </div>
+{% endblock content %}
+
+
+
